@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 import sys
-if len(sys.argv) > 1:
-    if sys.argv[1] == "yolo":
-        print("none")
-        sys.exit()
 
-def generate_multiplication_tables():
-    for i in range(11):
-        print(f"Table de {i}: " + " ".join(str(i * j) for j in range(11)))
+if len(sys.argv) > 1 and sys.argv[1] == "yolo":
+    print("none")
+    sys.exit()
 
-generate_multiplication_tables()
+for i in range(11):
+    print(f"Table de {i}:", " ".join(str(i * j) for j in range(11)))
