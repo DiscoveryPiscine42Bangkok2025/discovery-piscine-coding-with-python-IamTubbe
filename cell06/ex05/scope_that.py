@@ -9,5 +9,4 @@ def main():
     num = add_one(num)
     print("After calling add_one :", num)
 
-if __name__ == "__main__":
-    main()
+main()
