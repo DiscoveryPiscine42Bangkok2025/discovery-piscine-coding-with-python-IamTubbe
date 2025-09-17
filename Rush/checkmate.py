@@ -26,12 +26,15 @@ def validate_board(board):
     if piece_counts['Q'] > 1:
         print("มี Queen มากกว่า 1 ตัว")
         return False
+    
     if piece_counts['B'] > 2:
         print("มี Bishop มากกว่า 2 ตัว")
         return False
+    
     if piece_counts['P'] > 8:
         print("มี Pawn มากกว่า 8 ตัว")
         return False
+    
     if piece_counts['R'] > 2:
         print("มี Rook มากกว่า 2 ตัว")
         return False
