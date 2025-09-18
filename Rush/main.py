@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
-from checkmate import validate_board
+from checkmate import validate_board, is_king_checked
 
 def main():
-        
-        board = [
-            "........",
-            "........",
-            "...R....",
-            "....K...",
-            ".....P..",
-            "........",
-            "........",
-            "........"
-        ]
+    board = [
+        "........",
+        "........",
+        "...R....",
+        "....K...",
+        ".....P..",
+        "........",
+        "........",
+        "........"
+    ]
 
-        if validate_board(board):
-            print("Valid board configuration")
+    if validate_board(board):
+
+        if is_king_checked(board):
+            print("Success")
         else:
-            print("Invalid board configuration")
+            print("Fail")
 
 if __name__ == "__main__":
     main()
